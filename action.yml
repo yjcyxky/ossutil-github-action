@@ -1,0 +1,27 @@
+name: 'ossutil-github-action'
+description: 'GitHub actions for aliyun ossutil'
+author: 'Jingcheng Yang <yjcyxky@163.com>'
+branding:
+  icon: 'package'
+  color: 'blue'
+inputs:
+  ossArgs:
+    description: 'OSS Arguments'
+    required: true
+  accessKey:
+    description: 'Access Key'
+    required: true
+  accessSecret:
+    description: 'Access Secret'
+    required: true
+  endpoint:
+    description: 'Endpoint for aliyun oss'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.ossArgs }}
+    - ${{ inputs.accessKey }}
+    - ${{ inputs.accessSecret }}
+    - ${{ inputs.endpoint }}
