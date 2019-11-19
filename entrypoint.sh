@@ -36,6 +36,6 @@ EOF
 
 COMMAND="ossutil ${ARGUMENTS}"
 echo "Runing command: ${COMMAND}"
-ossutilmac64 $ARGUMENTS --config-file ossutilconfig
+ossutil $ARGUMENTS --config-file ossutilconfig
 
 echo ::set-output name=command::$COMMAND
