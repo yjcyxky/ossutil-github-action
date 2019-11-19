@@ -1,0 +1,30 @@
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  test-publish-docker:
+    runs-on: ubuntu-latest
+    name: Publish docker image for test
+    steps:
+      - name: Configure environment
+        id: config
+        run: |
+          VERSION=$(echo $GITHUB_REF | sed -e "s/^refs\/tags\/v//")
+          echo ::set-output name=version::$VERSION
+
+      - name: Fetch repository
+        uses: actions/checkout@master
+
+      - name: Download files
+        id: ossutil
+        uses: go-choppy/ossutil-github-action@master
+        with:
+          ossArgs: 'cp oss://nordata-cdn/choppy/about-us.md ./'
+          accessKey: ${{ secrets.ALIYUN_ACCESS_KEY }}
+          accessSecret: ${{ secrets.ALIYUN_ACCESS_SECRET }}
+          endpoint: oss-cn-shanghai.aliyuncs.com
+
+      - name: Output command
+        run: echo "${{steps.ossutil.outputs.command}}"
