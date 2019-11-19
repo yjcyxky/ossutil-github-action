@@ -11,7 +11,7 @@ LABEL "com.github.actions.color"="blue"
 
 RUN apk update \
   && apk upgrade \
-  && apk add --no-cache git bash
+  && apk add --no-cache git bash libc6-compat
 
 COPY entrypoint.sh /entrypoint.sh
 ADD http://gosspublic.alicdn.com/ossutil/1.6.9/ossutil64 /bin/ossutil
