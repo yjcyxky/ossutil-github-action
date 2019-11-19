@@ -8,10 +8,6 @@
 <img src="https://img.shields.io/github/license/go-choppy/ossutil-github-action.svg" alt="License">
 </p>
 
-# GitHub actions for aliyun ossutil
-
-This action update/download/upload files from/to aliyun oss.
-
 ## Inputs
 
 ### `ossArgs`
