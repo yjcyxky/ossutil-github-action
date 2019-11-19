@@ -1,3 +1,13 @@
+<h2 align="center">GitHub actions for aliyun ossutil</h2>
+<p align="center">update/download/upload files from/to aliyun oss</p>
+
+<p align="center">Jingcheng Yang [yjcyxky@163.com]</p>
+
+<p align="center">
+<img src="https://github.com/go-choppy/ossutil-github-action/workflows/.github/workflows/test.yml/badge.svg" alt="Build Status">
+<img src="https://img.shields.io/github/license/go-choppy/ossutil-github-action.svg" alt="License">
+</p>
+
 # GitHub actions for aliyun ossutil
 
 This action update/download/upload files from/to aliyun oss.
