@@ -30,7 +30,6 @@ the final command.
 
 ## Example usage
 
-If you use dockerhub[https://hub.docker.com],
 ```yaml
 uses: go-choppy/ossutil-github-action@master
 with:
