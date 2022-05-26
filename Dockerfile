@@ -14,7 +14,7 @@ RUN apk update \
   && apk add --no-cache git bash libc6-compat
 
 COPY entrypoint.sh /entrypoint.sh
-ADD http://gosspublic.alicdn.com/ossutil/1.6.9/ossutil64 /bin/ossutil
+ADD http://gosspublic.alicdn.com/ossutil/1.7.13/ossutil64 /bin/ossutil
 RUN chmod a+x /bin/ossutil
 
 ENTRYPOINT ["/entrypoint.sh"]
